@@ -9,7 +9,7 @@ import os
 import re
 import warnings
 import yaml
-
+import sys
 import pytest
 import github3
 
@@ -338,3 +338,5 @@ class GitHubPytestPlugin(object):
                         warnings.warn(errstr, Warning)
 
             item.funcargs["github_issues"] = issue_urls
+
+            os.exit()
